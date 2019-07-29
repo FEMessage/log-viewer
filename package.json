@@ -1,6 +1,6 @@
 {
   "name": "@femessage/log-viewer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "author": "https://github.com/FEMessage",
   "license": "MIT",
@@ -8,8 +8,16 @@
     "type": "git",
     "url": "https://github.com/FEMessage/log-viewer.git"
   },
-  "keywords": ["vue", "sfc", "component"],
-  "files": ["src", "dist", "yarn.lock"],
+  "keywords": [
+    "vue",
+    "sfc",
+    "component"
+  ],
+  "files": [
+    "src",
+    "dist",
+    "yarn.lock"
+  ],
   "main": "dist/log-viewer.umd.js",
   "module": "dist/log-viewer.esm.js",
   "unpkg": "dist/log-viewer.min.js",
@@ -20,14 +28,10 @@
     "dev": "vue-styleguidist server",
     "test": "jest",
     "doc": "vue-styleguidist build",
-    "build":
-      "npm run build:unpkg & npm run build:es & npm run build:umd & npm run doc",
-    "build:umd":
-      "rollup --config build/rollup.config.js --format umd --file dist/log-viewer.umd.js",
-    "build:es":
-      "rollup --config build/rollup.config.js --format es --file dist/log-viewer.esm.js",
-    "build:unpkg":
-      "rollup --config build/rollup.config.js --format iife --file dist/log-viewer.min.js",
+    "build": "npm run build:unpkg & npm run build:es & npm run build:umd & npm run doc",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/log-viewer.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/log-viewer.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/log-viewer.min.js",
     "precommit": "pretty-quick --staged",
     "stdver": "standard-version -m '[skip ci] chore(release): v%s'",
     "release": "gren release --override"

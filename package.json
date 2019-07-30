@@ -9,7 +9,7 @@
     "url": "https://github.com/FEMessage/log-viewer.git"
   },
   "keywords": ["vue", "sfc", "component"],
-  "files": ["src", "dist", "yarn.lock"],
+  "files": ["src", "dist"],
   "main": "dist/log-viewer.umd.js",
   "module": "dist/log-viewer.esm.js",
   "unpkg": "dist/log-viewer.min.js",
@@ -65,7 +65,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "vue-sfc-cli": "1.10.3",
+  "vue-sfc-cli": "1.10.6",
   "engines": {
     "node": ">= 4.0.0",
     "npm": ">= 3.0.0"

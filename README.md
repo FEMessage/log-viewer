@@ -15,27 +15,27 @@ log-viewer is a vue component which can display terminal log in browser with hig
 
 ## Table of Contents
 
-* [Features](#features)
-* [Install](#install)
-* [Usage](#usage)
-* [Reference](#reference)
-* [Performance](#performance)
-  * [Memory Usage](#memory-usage)
-    * [item-mode](#item-mode)
-    * [vfor-mode](#vfor-mode)
-  * [Render timeline](#render-timeline)
-    * [item-mode](#item-mode-1)
-    * [vfor-mode](#vfor-mode-1)
-* [Contributing](#contributing)
-* [Contributors](#contributors)
-* [License](#license)
+- [Features](#features)
+- [Install](#install)
+- [Usage](#usage)
+- [Reference](#reference)
+- [Performance](#performance)
+  - [Memory Usage](#memory-usage)
+    - [item-mode](#item-mode)
+    - [vfor-mode](#vfor-mode)
+  - [Render timeline](#render-timeline)
+    - [item-mode](#item-mode-1)
+    - [vfor-mode](#vfor-mode-1)
+- [Contributing](#contributing)
+- [Contributors](#contributors)
+- [License](#license)
 
 ## Features
 
-* Process some special characters in the log stream
-* High performance, and process large amounts of data without jamming
-* Customize loading status
-* Auto scroll to the bottom
+- Process some special characters in the log stream
+- High performance, and process large amounts of data without jamming
+- Customize loading status
+- Auto scroll to the bottom
 
 [⬆ Back to Top](#table-of-contents)
 
@@ -50,20 +50,17 @@ yarn add @femessage/log-viewer
 ## Usage
 
 ```html
-<log-viewer
-    :log="log"
-    :loading="isLoading"
-/>
+<log-viewer :log="log" :loading="isLoading" />
 ```
 
 [⬆ Back to Top](#table-of-contents)
 
 ## Reference
 
-* [thanks to react-lazylog](https://github.com/mozilla-frontend-infra/react-lazylog)
-* [travis-ci logs](https://travis-ci.org/)
-* [http://jafrog.com/2013/11/23/colors-in-terminal.html](http://jafrog.com/2013/11/23/colors-in-terminal.html)
-* [https://en.wikipedia.org/wiki/ANSI_escape_code](https://en.wikipedia.org/wiki/ANSI_escape_code)
+- [thanks to react-lazylog](https://github.com/mozilla-frontend-infra/react-lazylog)
+- [travis-ci logs](https://travis-ci.org/)
+- [http://jafrog.com/2013/11/23/colors-in-terminal.html](http://jafrog.com/2013/11/23/colors-in-terminal.html)
+- [https://en.wikipedia.org/wiki/ANSI_escape_code](https://en.wikipedia.org/wiki/ANSI_escape_code)
 
 [⬆ Back to Top](#table-of-contents)
 

@@ -19,7 +19,7 @@ export default {
   }
 }
 </script>
-<style lang="stylus">
+<style lang="less">
 .log-loading {
   .circular {
     height: 10px;

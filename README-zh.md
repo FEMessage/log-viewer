@@ -15,27 +15,27 @@
 
 ## Table of Contents
 
-* [Features](#features)
-* [Install](#install)
-* [Usage](#usage)
-* [Reference](#reference)
-* [Performance](#performance)
-  * [内存占用](#内存占用)
-    * [item-mode](#item-mode)
-    * [vfor-mode](#vfor-mode)
-  * [render 耗时](#render-耗时)
-    * [item-mode](#item-mode-1)
-    * [vfor-mode](#vfor-mode-1)
-* [Contributing](#contributing)
-* [Contributors](#contributors)
-* [License](#license)
+- [Features](#features)
+- [Install](#install)
+- [Usage](#usage)
+- [Reference](#reference)
+- [Performance](#performance)
+  - [内存占用](#内存占用)
+    - [item-mode](#item-mode)
+    - [vfor-mode](#vfor-mode)
+  - [render 耗时](#render-耗时)
+    - [item-mode](#item-mode-1)
+    - [vfor-mode](#vfor-mode-1)
+- [Contributing](#contributing)
+- [Contributors](#contributors)
+- [License](#license)
 
 ## Features
 
-* 对日志流中特殊字符进行了处理
-* 高性能，处理大量数据不卡顿
-* 可自定义 loading 样式
-* 可自动滚动到底部
+- 对日志流中特殊字符进行了处理
+- 高性能，处理大量数据不卡顿
+- 可自定义 loading 样式
+- 可自动滚动到底部
 
 [⬆ Back to Top](#table-of-contents)
 
@@ -50,20 +50,17 @@ yarn add @femessage/log-viewer
 ## Usage
 
 ```html
-<log-viewer
-    :log="log"
-    :loading="isLoading"
-/>
+<log-viewer :log="log" :loading="isLoading" />
 ```
 
 [⬆ Back to Top](#table-of-contents)
 
 ## Reference
 
-* [thanks to react-lazylog](https://github.com/mozilla-frontend-infra/react-lazylog)
-* [travis-ci logs](https://travis-ci.org/)
-* [http://jafrog.com/2013/11/23/colors-in-terminal.html](http://jafrog.com/2013/11/23/colors-in-terminal.html)
-* [https://en.wikipedia.org/wiki/ANSI_escape_code](https://en.wikipedia.org/wiki/ANSI_escape_code)
+- [thanks to react-lazylog](https://github.com/mozilla-frontend-infra/react-lazylog)
+- [travis-ci logs](https://travis-ci.org/)
+- [http://jafrog.com/2013/11/23/colors-in-terminal.html](http://jafrog.com/2013/11/23/colors-in-terminal.html)
+- [https://en.wikipedia.org/wiki/ANSI_escape_code](https://en.wikipedia.org/wiki/ANSI_escape_code)
 
 [⬆ Back to Top](#table-of-contents)
 

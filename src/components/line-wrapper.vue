@@ -58,7 +58,7 @@ export default {
   }
 }
 </script>
-<style lang="stylus">
+<style lang="less">
 .line-wrapper {
   color: #f1f1f1;
   line-height: 20px;
@@ -66,23 +66,25 @@ export default {
   white-space: nowrap;
   // word-break: break-all;
   box-sizing: border-box;
-  padding-left: 16px
+  padding-left: 16px;
 
   &:hover {
     background-color: #444;
   }
-  .line-number{
-    display:inline-block;
+
+  .line-number {
+    display: inline-block;
     min-width: 40px;
     text-align: right;
     color: #666;
     padding-right: 8px;
-    -webkit-user-select:none;
-    -moz-user-select:none;
-    -ms-user-select:none;
-    user-select:none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
-  .line-content{
+
+  .line-content {
     display: inline-block;
   }
 }

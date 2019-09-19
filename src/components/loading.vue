@@ -6,19 +6,12 @@
         <span>•</span>
         <span>•</span>
       </span>
-      <span>{{ loadingText }}</span>
     </slot>
   </span>
 </template>
 <script>
 export default {
-  name: 'LogLoading',
-  props: {
-    loadingText: {
-      type: String,
-      default: 'loading...'
-    }
-  }
+  name: 'LogLoading'
 }
 </script>
 

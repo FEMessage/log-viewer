@@ -1,33 +1,41 @@
 # log-viewer
 
-[![Build Status](https://travis-ci.com/FEMessage/log-viewer.svg?branch=master)](https://travis-ci.com/FEMessage/log-viewer)
-[![NPM Download](https://img.shields.io/npm/dm/@femessage/log-viewer.svg)](https://www.npmjs.com/package/@femessage/log-viewer)
-[![NPM Version](https://img.shields.io/npm/v/@femessage/log-viewer.svg)](https://www.npmjs.com/package/@femessage/log-viewer)
-[![NPM License](https://img.shields.io/npm/l/@femessage/log-viewer.svg)](https://github.com/FEMessage/log-viewer/blob/master/LICENSE)
+[![Build Status](https://badgen.net/travis/FEMessage/log-viewer/master)](https://travis-ci.com/FEMessage/log-viewer)
+[![NPM Download](https://badgen.net/npm/dm/@femessage/log-viewer)](https://www.npmjs.com/package/@femessage/log-viewer)
+[![NPM Version](https://badgen.net/npm/v/@femessage/log-viewer)](https://www.npmjs.com/package/@femessage/log-viewer)
+[![NPM License](https://badgen.net/npm/license/@femessage/log-viewer)](https://github.com/FEMessage/log-viewer/blob/master/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/FEMessage/log-viewer/pulls)
 [![Automated Release Notes by gren](https://img.shields.io/badge/%F0%9F%A4%96-release%20notes-00B2EE.svg)](https://github-tools.github.io/github-release-notes/)
 
 log-viewer is a vue component which can display terminal log in browser with high performance.
 
-![1.gif](https://cdn.nlark.com/yuque/0/2019/gif/298847/1563414930214-34da6e0b-bdbe-4c59-b531-772afa146417.gif#align=left&display=inline&height=837&name=1.gif&originHeight=837&originWidth=1118&size=78547&status=done&width=1118)
+![new-log](https://user-images.githubusercontent.com/53422750/65296811-4cb5b700-db98-11e9-9b55-1a5c8633ae8f.gif)
 
 [中文文档](./README-zh.md)
 
 ## Table of Contents
 
-* [Features](#Features)
-* [Install](#Install)
-* [Usage](#Usage)
-* [Performance](#performance)
-* [Contributors](#Contributors)
-* [MIT](#MIT)
+- [Features](#features)
+- [Install](#install)
+- [Usage](#usage)
+- [Reference](#reference)
+- [Performance](#performance)
+  - [Memory Usage](#memory-usage)
+    - [item-mode](#item-mode)
+    - [vfor-mode](#vfor-mode)
+  - [Render timeline](#render-timeline)
+    - [item-mode](#item-mode-1)
+    - [vfor-mode](#vfor-mode-1)
+- [Contributing](#contributing)
+- [Contributors](#contributors)
+- [License](#license)
 
 ## Features
 
-* Process some special characters in the log stream
-* High performance, and process large amounts of data without jamming
-* Customize loading status
-* Auto scroll to the bottom
+- Process some special characters in the log stream
+- High performance, and process large amounts of data without jamming
+- Customize loading status
+- Auto scroll to the bottom
 
 [⬆ Back to Top](#table-of-contents)
 
@@ -42,20 +50,17 @@ yarn add @femessage/log-viewer
 ## Usage
 
 ```html
-<log-viewer
-    :log="log"
-    :loading="isLoading"
-/>
+<log-viewer :log="log" :loading="isLoading" />
 ```
 
 [⬆ Back to Top](#table-of-contents)
 
 ## Reference
 
-* [thanks to react-lazylog](https://github.com/mozilla-frontend-infra/react-lazylog)
-* [travis-ci logs](https://travis-ci.org/)
-* [http://jafrog.com/2013/11/23/colors-in-terminal.html](http://jafrog.com/2013/11/23/colors-in-terminal.html)
-* [https://en.wikipedia.org/wiki/ANSI_escape_code](https://en.wikipedia.org/wiki/ANSI_escape_code)
+- [thanks to react-lazylog](https://github.com/mozilla-frontend-infra/react-lazylog)
+- [travis-ci logs](https://travis-ci.org/)
+- [http://jafrog.com/2013/11/23/colors-in-terminal.html](http://jafrog.com/2013/11/23/colors-in-terminal.html)
+- [https://en.wikipedia.org/wiki/ANSI_escape_code](https://en.wikipedia.org/wiki/ANSI_escape_code)
 
 [⬆ Back to Top](#table-of-contents)
 
@@ -101,6 +106,19 @@ Render time: 933.05ms<br />
 Patch time: 23.81ms<br />
 Total time: 956.86ms<br />
 ![v-for-1e5.gif](https://cdn.nlark.com/yuque/0/2019/gif/298847/1563849485762-ea08a525-f04c-4827-ab1d-5242d92b80ba.gif#align=left&display=inline&height=811&name=v-for-1e5.gif&originHeight=811&originWidth=1211&size=94294&status=done&width=1211)
+
+[⬆ Back to Top](#table-of-contents)
+
+## Contributing
+
+For those who are interested in contributing to this project, such as:
+
+- report a bug
+- request new feature
+- fix a bug
+- implement a new feature
+
+Please refer to our [contributing guide](https://github.com/FEMessage/.github/blob/master/CONTRIBUTING.md).
 
 [⬆ Back to Top](#table-of-contents)
 

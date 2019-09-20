@@ -1,5 +1,5 @@
 <template>
-  <div class="line-number" :class="className">{{number}}</div>
+  <div class="line-number" :class="className">{{ number }}</div>
 </template>
 <script>
 export default {

@@ -145,7 +145,7 @@ export default {
   }
 }
 </script>
-<style lang="stylus">
+<style lang="less">
 .log-viewer {
   font-size: 12px;
   background-color: #222;

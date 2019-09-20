@@ -11,8 +11,6 @@ install:
 - yarn test
 script:
 - ./build.sh
-after_success:
-- GREN_GITHUB_TOKEN=$GITHUB_TOKEN yarn release
 after_script:
 - ./notify.sh
 cache: yarn
@@ -21,7 +19,6 @@ deploy:
   local-dir: docs
   github-token: $GITHUB_TOKEN
   skip-cleanup: true
-  keep-history: true
 - provider: npm
   email: levy9527@qq.com
   api_key: $NPM_TOKEN

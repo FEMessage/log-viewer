@@ -9,7 +9,7 @@
 
 日志查看组件，将终端日志内容展示在页面中
 
-![new-log](https://user-images.githubusercontent.com/53422750/65296811-4cb5b700-db98-11e9-9b55-1a5c8633ae8f.gif)
+![new-log](https://user-images.githubusercontent.com/53422750/65309425-a7620980-dbbe-11e9-9ae4-09eeb454ae44.gif)
 
 [English](./README-en.md)
 

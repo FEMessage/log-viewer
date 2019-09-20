@@ -9,7 +9,7 @@
 
 log-viewer is a vue component which can display terminal log in browser with high performance.
 
-![1.gif](https://cdn.nlark.com/yuque/0/2019/gif/298847/1563414930214-34da6e0b-bdbe-4c59-b531-772afa146417.gif#align=left&display=inline&height=837&name=1.gif&originHeight=837&originWidth=1118&size=78547&status=done&width=1118)
+![new-log](https://user-images.githubusercontent.com/53422750/65296811-4cb5b700-db98-11e9-9b55-1a5c8633ae8f.gif)
 
 [中文文档](./README-zh.md)
 

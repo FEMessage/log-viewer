@@ -20,6 +20,15 @@
         "doc",
         "test"
       ]
+    },
+    {
+      "login": "evillt",
+      "name": "EVILLT",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/19513289?v=4",
+      "profile": "https://evila.me",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7

@@ -5,6 +5,11 @@ then
   exit 1
 fi
 
+git remote add github https://$GITHUB_TOKEN@github.com/FEMessage/log-viewer.git > /dev/null 2>&1
+git push github HEAD:master --follow-tags
+
+GREN_GITHUB_TOKEN=$GITHUB_TOKEN yarn release
+
 url=https://api.github.com/repos/FEMessage/log-viewer/releases/latest
 resp_tmp_file=resp.tmp
 

@@ -22,7 +22,7 @@ export default {
 
     span {
       animation: blink 1s infinite both;
-      margin-left: -1px;
+      margin-left: 1px;
 
       &:first-child {
         margin-left: 0;
@@ -43,11 +43,11 @@ export default {
       }
 
       25% {
-        opacity: .4;
+        opacity: 0.4;
       }
 
       75% {
-        opacity: .4;
+        opacity: 0.4;
       }
 
       100% {

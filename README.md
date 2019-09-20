@@ -127,9 +127,9 @@ Please refer to our [contributing guide](https://github.com/FEMessage/.github/bl
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-
 <!-- prettier-ignore -->
-<table><tr><td align="center"><a href="https://github.com/snowlocked"><img src="https://avatars0.githubusercontent.com/u/19562649?v=4" width="100px;" alt="snowlocked"/><br /><sub><b>snowlocked</b></sub></a><br /><a href="https://github.com/FEMessage/log-viewer/commits?author=snowlocked" title="Code">💻</a> <a href="https://github.com/FEMessage/log-viewer/commits?author=snowlocked" title="Documentation">📖</a> <a href="https://github.com/FEMessage/log-viewer/commits?author=snowlocked" title="Tests">⚠️</a></td></tr></table>
+<table><tr><td align="center"><a href="https://github.com/snowlocked"><img src="https://avatars0.githubusercontent.com/u/19562649?v=4" width="100px;" alt="snowlocked"/><br /><sub><b>snowlocked</b></sub></a><br /><a href="https://github.com/FEMessage/log-viewer/commits?author=snowlocked" title="Code">💻</a> <a href="https://github.com/FEMessage/log-viewer/commits?author=snowlocked" title="Documentation">📖</a> <a href="https://github.com/FEMessage/log-viewer/commits?author=snowlocked" title="Tests">⚠️</a></td><td align="center"><a href="https://evila.me"><img src="https://avatars3.githubusercontent.com/u/19513289?v=4" width="100px;" alt="EVILLT"/><br /><sub><b>EVILLT</b></sub></a><br /><a href="https://github.com/FEMessage/log-viewer/commits?author=evillt" title="Code">💻</a></td></tr></table>
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

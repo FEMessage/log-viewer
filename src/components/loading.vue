@@ -21,19 +21,19 @@ export default {
     margin-right: 3px;
 
     span {
-      animation: blink 1.4s infinite both;
-      margin-left: -1px;
+      animation: blink 1s infinite both;
+      margin-left: 2px;
 
       &:first-child {
         margin-left: 0;
       }
 
       &:nth-child(2) {
-        animation-delay: 0.2s;
+        animation-delay: 0.33s;
       }
 
       &:nth-child(3) {
-        animation-delay: 0.4s;
+        animation-delay: 0.66s;
       }
     }
 

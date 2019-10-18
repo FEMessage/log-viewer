@@ -19,7 +19,7 @@ export default {
 .log-loading {
   .loading-dots {
     .dot {
-      animation: blink 0.55s infinite both;
+      animation: blink 0.54s infinite both;
       margin-left: -1px;
 
       &:first-child {
@@ -27,17 +27,17 @@ export default {
       }
 
       &:nth-child(2) {
-        animation-delay: 0.15s;
+        animation-delay: 0.18s;
       }
 
       &:nth-child(3) {
-        animation-delay: 0.35s;
+        animation-delay: 0.36s;
       }
     }
 
     @keyframes blink {
       0% {
-        opacity: 0.45;
+        opacity: 0.4;
       }
 
       20% {
@@ -45,7 +45,7 @@ export default {
       }
 
       100% {
-        opacity: 0.45;
+        opacity: 0.4;
       }
     }
   }

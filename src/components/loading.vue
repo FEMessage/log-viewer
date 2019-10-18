@@ -37,7 +37,7 @@ export default {
 
     @keyframes blink {
       0% {
-        opacity: 0.3;
+        opacity: 0.2;
       }
 
       20% {
@@ -45,7 +45,7 @@ export default {
       }
 
       100% {
-        opacity: 0.3;
+        opacity: 0.2;
       }
     }
   }

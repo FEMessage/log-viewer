@@ -17,7 +17,10 @@ const config = {
     commonjs(),
     vue({
       css: true,
-      compileTemplate: true
+      compileTemplate: true,
+      style: {
+        postcssPlugins: [require('autoprefixer')]
+      }
     }),
     babel({
       runtimeHelpers: true,

@@ -2,9 +2,9 @@
   <span class="log-loading">
     <slot>
       <span class="loading-dots">
-        <span>•</span>
-        <span>•</span>
-        <span>•</span>
+        <span class="dot">•</span>
+        <span class="dot">•</span>
+        <span class="dot">•</span>
       </span>
     </slot>
   </span>
@@ -18,10 +18,8 @@ export default {
 <style lang="less">
 .log-loading {
   .loading-dots {
-    margin-right: 3px;
-
-    span {
-      animation: blink 1.4s infinite both;
+    .dot {
+      animation: blink 0.6s infinite both;
       margin-left: -1px;
 
       &:first-child {

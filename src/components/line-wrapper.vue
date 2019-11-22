@@ -86,6 +86,7 @@ export default {
 
   .line-content {
     display: inline-block;
+    white-space: pre;
   }
 }
 </style>

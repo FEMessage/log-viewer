@@ -1,7 +1,5 @@
 <template>
-  <div class="line-content" :class="className">
-    {{ text }}
-  </div>
+  <div class="line-content" :class="className">{{ text }}</div>
 </template>
 <script>
 export default {

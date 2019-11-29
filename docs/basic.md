@@ -28,7 +28,6 @@ export default {
   mounted(){
     this.getTravisLog()
     this.getServerlessLog()
-    this.getDevopsLog()
   },
   methods:{
     getTravisLog(){
@@ -38,7 +37,7 @@ export default {
       })
     },
     getServerlessLog(){
-      const logUrl = 'http://39.100.141.76:3000/mock/922/log/serverless'
+      const logUrl = 'https://mockapi.eolinker.com/IeZWjzy87c204a1f7030b2a17b00f3776ce0a07a5030a1b/log-viewer'
       get(logUrl).then(res=>{
         res = JSON.parse(res)
         this.serverlessLog = res.payload.logs

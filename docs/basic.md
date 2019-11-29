@@ -4,7 +4,7 @@ basic usage
 <template>
   <div>
     <div style="margin-bottom:8px;">Show travis log</div>
-    <log-viewer :log="travisLog"/>
+    <log-viewer :log="travisLog" :auto-scroll="false"/>
     <div style="margin-top:16px;margin-bottom:8px;">Show nuxt build log</div>
     <log-viewer :log="nuxtBuildLog"/>
   </div>

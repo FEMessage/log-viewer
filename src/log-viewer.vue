@@ -135,9 +135,7 @@ export default {
           }
         }
       }
-      props.data = {
-        text: this.lines[index]
-      }
+      props.data = this.lines[index]
       return {
         props
       }

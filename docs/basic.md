@@ -21,8 +21,7 @@ export default {
   data(){
     return {
       travisLog: '',
-      serverlessLog:'',
-      devopsLog:'',
+      serverlessLog:''
     }
   },
   mounted(){

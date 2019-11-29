@@ -2,7 +2,7 @@
   <div class="line-wrapper" :style="customStyle">
     <line-number v-if="hasNumber" v-bind="numberData"></line-number>
     <slot>
-      <line-content v-bind="data"></line-content>
+      <line-content :content="data"></line-content>
     </slot>
   </div>
 </template>
@@ -20,11 +20,13 @@ export default {
      * line-content attrs
      */
     data: {
-      type: Object,
+      type: Array,
       default() {
-        return {
-          text: ''
-        }
+        return [
+          {
+            text: ''
+          }
+        ]
       }
     },
     /**

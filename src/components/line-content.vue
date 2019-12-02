@@ -4,9 +4,11 @@
       v-for="(item, index) in content"
       :key="index"
       :class="[
-        item.bold ? 'log-bold' : '',
-        item.underline ? 'log-underline' : '',
-        item.italic ? 'log-italic' : '',
+        {
+          'log-bold': item.bold,
+          'log-underline': item.underline,
+          'log-italic': item.italic
+        },
         item.foreground ? 'log-fore-' + item.foreground : '',
         item.background ? 'log-back-' + item.background : ''
       ]"

@@ -71,6 +71,13 @@ export default {
     hasNumber: {
       type: Boolean,
       default: true
+    },
+    /**
+     * Auto scroll to bottom's time duration, defaults to 0 means to no duration.
+     */
+    scrollDuration: {
+      type: Number,
+      default: 0
     }
   },
   data() {
@@ -104,7 +111,14 @@ export default {
       handler(lines) {
         this.$refs.virturalList && this.$refs.virturalList.forceRender()
         if (this.autoScroll) {
-          this.setScrollTop(this.linesCount)
+          if (this.scrollDuration > 0) {
+            this.setScrollTop(this.linesCount)
+          } else {
+            this.$nextTick(() => {
+              // 在nextick外面执行会导致自动滚动到上一次的位置
+              this.start = this.linesCount
+            })
+          }
         }
       }
     }
@@ -146,7 +160,8 @@ export default {
         cancelAnimationFrame(this.animate)
       }
       let i = this.scrollStart
-      const step = 2
+      const step =
+        Math.abs(line - this.scrollStart) / ((this.scrollDuration * 60) / 1e3)
       const animation = () => {
         this.animate = requestAnimationFrame(() => {
           // 从起始行开始滚动，若起始行小于目标行时，每帧逐渐增加行数（向下滚），直到目标行
@@ -154,7 +169,7 @@ export default {
           // 若当前行在目标行范围内[line-step,line+step], 直接滚到目标行
           if (i < line - step || i > line + step) {
             this.start = i
-            i = i < line - step ? i + step : i - step
+            i = Math.floor(i < line - step ? i + step : i - step)
             animation()
           } else {
             this.start = line

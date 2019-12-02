@@ -1,8 +1,10 @@
-basic usage
+scroll-duration
+
+When auto-scroll is true, you can set scroll-duration to control how long(ms) scroll to the bottom. Defaults to be 0 means no duration.
 
 ```vue
 <template>
-  <log-viewer :log="log"/>
+  <log-viewer :log="log" :scroll-duration="1000" />
 </template>
 
 <script>

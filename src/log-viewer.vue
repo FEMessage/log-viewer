@@ -153,15 +153,12 @@ export default {
           // 同理，若起始行大于目标行时，每帧减少行数（向上滚），直到目标行
           // 若当前行在目标行范围内[line-step,line+step], 直接滚到目标行
           if (i < line - step || i > line + step) {
-            this.$refs.virturalList.setScrollTop(i * this.rowHeight)
+            this.start = i
             i = i < line - step ? i + step : i - step
             animation()
           } else {
-            this.$nextTick(() => {
-              // 在nextick外面执行会导致自动滚动到上一次的位置
-              this.start = line
-              this.scrollStart = this.start
-            })
+            this.start = line
+            this.scrollStart = this.start
           }
         })
       }

@@ -160,8 +160,9 @@ export default {
         cancelAnimationFrame(this.animate)
       }
       let i = this.scrollStart
-      const step =
+      let step =
         Math.abs(line - this.scrollStart) / ((this.scrollDuration * 60) / 1e3)
+      step = step < 1 ? 1 : step
       const animation = () => {
         this.animate = requestAnimationFrame(() => {
           // 从起始行开始滚动，若起始行小于目标行时，每帧逐渐增加行数（向下滚），直到目标行

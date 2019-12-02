@@ -10,6 +10,7 @@
     :item="LineWrapper"
     :itemcount="linesCount"
     :itemprops="getLineWrapperProps"
+    :onscroll="onscroll"
   >
   </virtual-list>
 </template>
@@ -70,11 +71,20 @@ export default {
     hasNumber: {
       type: Boolean,
       default: true
+    },
+    /**
+     *  When both autoScroll and scrollWithAnimate are true, it will auto scroll to the bottom with an animation.
+     */
+    scrollWithAnimate: {
+      type: Boolean,
+      default: true
     }
   },
   data() {
     return {
       start: 0,
+      scrollStart: 0,
+      animate: null,
       LineWrapper
     }
   },
@@ -100,11 +110,16 @@ export default {
       immediate: true,
       handler(lines) {
         this.$refs.virturalList && this.$refs.virturalList.forceRender()
-        this.autoScroll &&
-          this.$nextTick(() => {
-            // 在nextick外面执行会导致自动滚动到上一次的位置
-            this.start = this.lines.length + (this.loading ? 1 : 0)
-          })
+        if (this.autoScroll) {
+          if (this.scrollWithAnimate) {
+            this.setScrollTop(this.linesCount)
+          } else {
+            this.$nextTick(() => {
+              // 在nextick外面执行会导致自动滚动到上一次的位置
+              this.start = this.lines.length + (this.loading ? 1 : 0)
+            })
+          }
+        }
       }
     }
   },
@@ -139,6 +154,32 @@ export default {
       return {
         props
       }
+    },
+    setScrollTop(line) {
+      if (this.animate) {
+        cancelAnimationFrame(this.animate)
+      }
+      let i = this.scrollStart
+      const step = 2
+      const animation = () => {
+        this.animate = requestAnimationFrame(() => {
+          if (i < line - step || i > line + step) {
+            this.$refs.virturalList.setScrollTop(i * this.rowHeight)
+            i = i < line - step ? i + step : i - step
+            animation()
+          } else {
+            this.$nextTick(() => {
+              // 在nextick外面执行会导致自动滚动到上一次的位置
+              this.start = line
+              this.scrollStart = this.start
+            })
+          }
+        })
+      }
+      animation()
+    },
+    onscroll(event, data) {
+      this.scrollStart = Math.floor(data.offset / this.rowHeight) + 1
     }
   }
 }

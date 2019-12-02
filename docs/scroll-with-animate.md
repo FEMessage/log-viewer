@@ -1,11 +1,11 @@
-auto-scroll 属性设置是否自动滚动到底部
+scroll-with-animate 属性设置是否有滚动动画
 
-set auto-scroll true to auto scroll to bottom
+set scroll-with-animate true to scroll with an animated
 
 ```vue
 <template>
   <div>
-    <log-viewer class="auto-scroll" v-for="auto in autoes" :key="auto" :log="log" :auto-scroll="auto" />
+    <log-viewer class="auto-scroll" v-for="scroll in scrollWithAnimate" :key="scroll" :log="log" :scroll-with-animate="scroll" />
   </div>
 </template>
 <script>
@@ -14,7 +14,7 @@ set auto-scroll true to auto scroll to bottom
     data(){
       return {
         log: '',
-        autoes: [true, false]
+        scrollWithAnimate: [true, false]
       }
     },
     mounted(){
@@ -26,7 +26,7 @@ set auto-scroll true to auto scroll to bottom
         get(travisUrl).then((text)=>{
           this.log = text
         })
-    },
+      },
     }
   }
 </script>

@@ -163,6 +163,9 @@ export default {
       const step = 2
       const animation = () => {
         this.animate = requestAnimationFrame(() => {
+          // 从起始行开始滚动，若起始行小于目标行时，每帧逐渐增加行数（向下滚），直到目标行
+          // 同理，若起始行大于目标行时，每帧减少行数（向上滚），直到目标行
+          // 若当前行在目标行范围内[line-step,line+step], 直接滚到目标行
           if (i < line - step || i > line + step) {
             this.$refs.virturalList.setScrollTop(i * this.rowHeight)
             i = i < line - step ? i + step : i - step
@@ -179,7 +182,7 @@ export default {
       animation()
     },
     onscroll(event, data) {
-      this.scrollStart = Math.floor(data.offset / this.rowHeight) + 1
+      this.scrollStart = Math.ceil(data.offset / this.rowHeight)
     }
   }
 }

@@ -111,14 +111,7 @@ export default {
       handler(lines) {
         this.$refs.virturalList && this.$refs.virturalList.forceRender()
         if (this.autoScroll) {
-          if (this.scrollDuration > 0) {
-            this.setScrollTop(this.linesCount)
-          } else {
-            this.$nextTick(() => {
-              // 在nextick外面执行会导致自动滚动到上一次的位置
-              this.start = this.linesCount
-            })
-          }
+          this.setScrollTop(this.linesCount)
         }
       }
     }
@@ -156,11 +149,19 @@ export default {
       }
     },
     setScrollTop(line) {
+      if (this.scrollDuration === 0) {
+        this.$nextTick(() => {
+          // 在nextick外面执行会导致自动滚动到上一次的位置
+          this.start = this.linesCount
+        })
+        return
+      }
       if (this.animate) {
         cancelAnimationFrame(this.animate)
       }
       let i = this.scrollStart
-      let step =
+      let step = 0
+      step =
         Math.abs(line - this.scrollStart) / ((this.scrollDuration * 60) / 1e3)
       step = step < 1 ? 1 : step
       const animation = () => {

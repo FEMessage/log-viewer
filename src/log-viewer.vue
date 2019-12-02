@@ -71,13 +71,6 @@ export default {
     hasNumber: {
       type: Boolean,
       default: true
-    },
-    /**
-     *  When both autoScroll and scrollWithAnimate are true, it will auto scroll to the bottom with an animation.
-     */
-    scrollWithAnimate: {
-      type: Boolean,
-      default: true
     }
   },
   data() {
@@ -111,14 +104,7 @@ export default {
       handler(lines) {
         this.$refs.virturalList && this.$refs.virturalList.forceRender()
         if (this.autoScroll) {
-          if (this.scrollWithAnimate) {
-            this.setScrollTop(this.linesCount)
-          } else {
-            this.$nextTick(() => {
-              // 在nextick外面执行会导致自动滚动到上一次的位置
-              this.start = this.lines.length + (this.loading ? 1 : 0)
-            })
-          }
+          this.setScrollTop(this.linesCount)
         }
       }
     }

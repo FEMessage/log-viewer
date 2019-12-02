@@ -1,15 +1,18 @@
 auto-scroll 属性设置是否自动滚动到底部
 
-set auto-scroll true to auto scroll to bottom
+set auto-scroll true to auto scroll to bottom, and false to do nothing. Defaults to true.
 
 ```vue
 <template>
-  <div>
-    <log-viewer class="auto-scroll" v-for="auto in autoes" :key="auto" :log="log" :auto-scroll="auto" />
-  </div>
+  <log-viewer class="auto-scroll" :log="log" :auto-scroll="false" />
 </template>
 <script>
-  import get from './get'
+  const get = url => new Promise((resolve, reject)=>{
+    const xhr = new XMLHttpRequest()
+    xhr.open("GET",url)
+    xhr.send()
+    xhr.onload = data => resolve(data.target.responseText)
+  })
   export default{
     data(){
       return {
@@ -26,7 +29,7 @@ set auto-scroll true to auto scroll to bottom
         get(travisUrl).then((text)=>{
           this.log = text
         })
-    },
+      },
     }
   }
 </script>

@@ -73,7 +73,7 @@ export default {
       default: true
     },
     /**
-     * Auto scroll to bottom's time duration, defaults to 0 means to no duration.
+     * Auto scroll to bottom's time duration(ms), defaults to 0 means to no duration.
      */
     scrollDuration: {
       type: Number,

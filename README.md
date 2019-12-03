@@ -18,6 +18,7 @@ log-viewer is a vue component which can display terminal log in browser with hig
 - [Features](#features)
 - [Install](#install)
 - [Usage](#usage)
+- [Links](#links)
 - [Reference](#reference)
 - [Performance](#performance)
   - [Memory Usage](#memory-usage)
@@ -52,6 +53,12 @@ yarn add @femessage/log-viewer
 ```html
 <log-viewer :log="log" :loading="isLoading" />
 ```
+
+[⬆ Back to Top](#table-of-contents)
+
+## Links
+
+- [design doc](https://www.yuque.com/docs/share/db3640ad-ab65-4588-8244-d245f90e9a6a?translate=en)
 
 [⬆ Back to Top](#table-of-contents)
 

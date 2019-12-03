@@ -10,6 +10,7 @@
     :item="LineWrapper"
     :itemcount="linesCount"
     :itemprops="getLineWrapperProps"
+    :onscroll="onscroll"
   >
   </virtual-list>
 </template>
@@ -70,11 +71,20 @@ export default {
     hasNumber: {
       type: Boolean,
       default: true
+    },
+    /**
+     * Auto scroll to bottom's time duration(ms), defaults to 0 means to no duration.
+     */
+    scrollDuration: {
+      type: Number,
+      default: 0
     }
   },
   data() {
     return {
       start: 0,
+      scrollStart: 0,
+      animate: null,
       LineWrapper
     }
   },
@@ -100,11 +110,9 @@ export default {
       immediate: true,
       handler(lines) {
         this.$refs.virturalList && this.$refs.virturalList.forceRender()
-        this.autoScroll &&
-          this.$nextTick(() => {
-            // 在nextick外面执行会导致自动滚动到上一次的位置
-            this.start = this.lines.length + (this.loading ? 1 : 0)
-          })
+        if (this.autoScroll) {
+          this.setScrollTop(this.linesCount)
+        }
       }
     }
   },
@@ -139,6 +147,42 @@ export default {
       return {
         props
       }
+    },
+    setScrollTop(line) {
+      if (this.scrollDuration === 0) {
+        this.$nextTick(() => {
+          // 在nextick外面执行会导致自动滚动到上一次的位置
+          this.start = this.linesCount
+        })
+        return
+      }
+      if (this.animate) {
+        cancelAnimationFrame(this.animate)
+      }
+      let i = this.scrollStart
+      let step = 0
+      step =
+        Math.abs(line - this.scrollStart) / ((this.scrollDuration * 60) / 1e3)
+      step = step < 1 ? 1 : step
+      const animation = () => {
+        this.animate = requestAnimationFrame(() => {
+          // 从起始行开始滚动，若起始行小于目标行时，每帧逐渐增加行数（向下滚），直到目标行
+          // 同理，若起始行大于目标行时，每帧减少行数（向上滚），直到目标行
+          // 若当前行在目标行范围内[line-step,line+step], 直接滚到目标行
+          if (i < line - step || i > line + step) {
+            this.start = i
+            i = Math.floor(i < line - step ? i + step : i - step)
+            animation()
+          } else {
+            this.start = line
+            this.scrollStart = this.start
+          }
+        })
+      }
+      animation()
+    },
+    onscroll(event, data) {
+      this.scrollStart = Math.ceil(data.offset / this.rowHeight)
     }
   }
 }

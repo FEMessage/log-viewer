@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/FEMessage/log-viewer/compare/v1.3.0...v1.4.0) (2019-12-03)
+
+
+### Features
+
+* **scroll-duration:** add animate effect to auto scroll ([#11](https://github.com/FEMessage/log-viewer/issues/11)) ([7691b56](https://github.com/FEMessage/log-viewer/commit/7691b56))
+* Terminal colors ([#10](https://github.com/FEMessage/log-viewer/issues/10)) ([9f5408f](https://github.com/FEMessage/log-viewer/commit/9f5408f))
+
+
+
 ## [1.3.0](https://github.com/FEMessage/log-viewer/compare/v1.2.3...v1.3.0) (2019-11-29)
 
 

@@ -18,6 +18,7 @@
 - [Features](#features)
 - [Install](#install)
 - [Usage](#usage)
+- [Links](#links)
 - [Reference](#reference)
 - [Performance](#performance)
   - [内存占用](#内存占用)
@@ -52,6 +53,11 @@ yarn add @femessage/log-viewer
 ```html
 <log-viewer :log="log" :loading="isLoading" />
 ```
+[⬆ Back to Top](#table-of-contents)
+
+## Links
+
+- [design doc](https://www.yuque.com/docs/share/db3640ad-ab65-4588-8244-d245f90e9a6a#)
 
 [⬆ Back to Top](#table-of-contents)
 

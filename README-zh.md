@@ -57,7 +57,7 @@ yarn add @femessage/log-viewer
 
 ## Links
 
-- [design doc](https://www.yuque.com/docs/share/db3640ad-ab65-4588-8244-d245f90e9a6a#)
+- [设计文档](https://www.yuque.com/docs/share/db3640ad-ab65-4588-8244-d245f90e9a6a#)
 
 [⬆ Back to Top](#table-of-contents)
 

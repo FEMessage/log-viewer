@@ -1,16 +1,12 @@
 // Import vue component
 import Component from './log-viewer.vue'
 
-// install function executed by Vue.use()
-export function install(Vue) {
-  if (install.installed) return
-  install.installed = true
-  Vue.component('LogViewer', Component)
-}
-
-// Create module definition for Vue.use()
-const plugin = {
-  install
+// `Vue.use` automatically prevents you from using
+// the same plugin more than once,
+// so calling it multiple times on the same plugin
+// will install the plugin only once
+Component.install = Vue => {
+  Vue.component(Component.name, Component)
 }
 
 // To auto-install when vue is found
@@ -21,7 +17,7 @@ if (typeof window !== 'undefined') {
   GlobalVue = global.Vue
 }
 if (GlobalVue) {
-  GlobalVue.use(plugin)
+  GlobalVue.use(Component)
 }
 
 // To allow use as module (npm/webpack/etc.) export component

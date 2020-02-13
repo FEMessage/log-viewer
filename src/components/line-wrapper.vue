@@ -62,6 +62,7 @@ export default {
 </script>
 <style lang="less">
 .line-wrapper {
+  display: flex;
   color: #f1f1f1;
   line-height: 20px;
   height: 20px;
@@ -75,19 +76,14 @@ export default {
   }
 
   .line-number {
-    display: inline-block;
     min-width: 40px;
     text-align: right;
     color: #666;
-    padding-right: 8px;
+    padding-right: 10px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-  }
-
-  .line-content {
-    display: inline-block;
   }
 }
 </style>

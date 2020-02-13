@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.1](https://github.com/FEMessage/log-viewer/compare/v1.4.0...v1.4.1) (2020-02-13)
+
+
+### Bug Fixes
+
+* safari中，使用white-space时，超出一行的文字重叠了 ([#14](https://github.com/FEMessage/log-viewer/issues/14)) ([ba3289d](https://github.com/FEMessage/log-viewer/commit/ba3289d))
+
+
+
 ## [1.4.0](https://github.com/FEMessage/log-viewer/compare/v1.3.0...v1.4.0) (2019-12-03)
 
 

@@ -23,6 +23,7 @@
   "browser": {
     "./sfc": "src/log-viewer.vue"
   },
+  "types": "src/log-viewer.d.ts",
   "scripts": {
     "dev": "vue-styleguidist server",
     "test": "jest --verbose",

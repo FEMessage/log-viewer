@@ -1,6 +1,6 @@
 {
   "name": "@femessage/log-viewer",
-  "version": "1.4.2",
+  "version": "1.5.0",
   "description": "💻 View terminal logs in browser",
   "author": "https://github.com/FEMessage",
   "license": "MIT",

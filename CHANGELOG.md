@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/FEMessage/log-viewer/compare/v1.4.2...v1.5.0) (2020-11-11)
+
+
+### Features
+
+* add types ([#18](https://github.com/FEMessage/log-viewer/issues/18)) ([9dd82f0](https://github.com/FEMessage/log-viewer/commit/9dd82f0))
+
+
+
 ### [1.4.2](https://github.com/FEMessage/log-viewer/compare/v1.4.1...v1.4.2) (2020-08-13)
 
 

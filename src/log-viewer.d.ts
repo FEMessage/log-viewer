@@ -1,6 +1,5 @@
-import Vue, {VueConstructor} from 'vue'
-
 declare module '@femessage/log-viewer' {
+  import Vue, {VueConstructor} from 'vue'
   class FemessageComponent extends Vue {
     static install(vue: typeof Vue): void
   }
